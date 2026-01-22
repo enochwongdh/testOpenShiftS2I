@@ -8,8 +8,13 @@ app.get('/', (req, res) => {
     res.send("Hello world~!");
 })
 
-app.get('/test', (req, res) => {
-    res.send("test page");
+app.get('/test2', (req, res) => {
+    res.send("new test page");
+})
+
+app.get('/greet', (req, res) => {
+    const gName = req.query.n;
+    res.send(`Welcome, ${gName}! You're the 1st one to be here.`);
 })
 
 app.listen(PORT, HOST, () => {
